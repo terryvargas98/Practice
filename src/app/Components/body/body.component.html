@@ -1,0 +1,24 @@
+<div class="row">
+
+    <div class="col m-5">
+        <h1>*ngif</h1>
+        <hr>
+        <div *ngIf="x" class="card text-white bg-primary mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{Objeto.autor}}</h5>
+                <p class="card-text">{{Objeto.frase}}.</p>
+            </div>
+        </div>
+        <button type="button" (click)='retornar()' id="boton " class="btn btn-outline-primary ">Mostar/Ocultar</button>
+    </div>
+
+    <div class="col m-5 ">
+        <h1>*ngfor </h1>
+        <hr>
+
+        <ul class="list-group ">
+            <li class="list-group-item " *ngFor="let temp of heroes , let x=index"> {{x+1}}.{{temp}}</li>
+
+        </ul>
+    </div>
